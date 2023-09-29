@@ -4,6 +4,9 @@ import List from "./List";
 
 function App() {
   const [People, setPeople] = useState(data);
+  const clearAll = () => {
+    setPeople([]);
+  };
 
   return (
     <>
@@ -11,9 +14,9 @@ function App() {
         <h1>Workshop 1 : Birthday List Project</h1>
         <main>
           <section className="container">
-            <h3>Birthday Today</h3>
+            <h3>{People.length} Birthday Today</h3>
             <List People={People} />
-            <button>Clear All</button>
+            <button onClick={clearAll}>Clear All</button>
           </section>
         </main>
       </div>
