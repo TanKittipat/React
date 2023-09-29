@@ -12,7 +12,7 @@ function App() {
         <main>
           <section className="container">
             <h3>Birthday Today</h3>
-            <List />
+            <List People={People} />
             <button>Clear All</button>
           </section>
         </main>
